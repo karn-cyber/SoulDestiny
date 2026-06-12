@@ -63,6 +63,8 @@
   .nav.light.scrolled .brand-name{color:var(--ink-dark);-webkit-text-fill-color:var(--ink-dark)}
   .nav.light.scrolled .nav-cta{border-color:var(--gold-3);color:var(--gold-deep)}
   .brand{display:flex;align-items:center;gap:12px}
+  .brand .mark{width:40px;height:40px;border-radius:50%;overflow:hidden;border:1px solid var(--gold-3);flex:0 0 auto;background:radial-gradient(circle,#0e4733,#062b1f)}
+  .brand .mark img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
   .brand-name{font-family:'Cinzel',serif;font-weight:700;font-size:19px;letter-spacing:.05em}
   .brand-sub{font-size:9px;letter-spacing:.42em;color:var(--gold-2);text-transform:uppercase}
   .nav-links{display:flex;gap:28px;align-items:center}
@@ -101,8 +103,8 @@
   .ring.r3{inset:18%;border-color:rgba(226,185,90,.4);animation:spin 48s linear infinite reverse}
   .nums{position:absolute;inset:0;animation:spin 90s linear infinite}
   .nums span{position:absolute;left:50%;top:50%;font-family:'Cinzel',serif;font-size:19px;color:var(--gold-2);transform-origin:0 0;opacity:.85}
-  .nine{font-family:'Cinzel',serif;font-weight:900;font-size:clamp(120px,18vw,180px);line-height:1;background:linear-gradient(160deg,var(--gold-1),var(--gold-2) 50%,var(--gold-deep));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .lotus-top{position:absolute;top:-2%;width:40px;color:var(--gold-2)}
+  .logo-medallion{position:absolute;inset:21%;border-radius:50%;overflow:hidden;border:2px solid var(--gold-3);box-shadow:0 14px 44px rgba(0,0,0,.45),inset 0 0 26px rgba(0,0,0,.35)}
+  .logo-medallion img{width:100%;height:100%;object-fit:cover;object-position:center 32%}
 
   /* ---------- SHOWCASE (thrown cards) ---------- */
   .showcase-track{height:320vh;background:var(--ivory)}
@@ -242,14 +244,7 @@
 <!-- NAV -->
 <nav class="nav" id="nav">
   <a href="#top" class="brand">
-    <span class="mark">
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-        <circle cx="18" cy="18" r="17" stroke="#bf8f33" stroke-width="1"/>
-        <path d="M18 8c-2.6 2.6-5 4.4-5 7.6a5 5 0 0 0 10 0c0-3.2-2.4-5-5-7.6z" fill="url(#lg)"/>
-        <path d="M11 19c1.8 2.6 4.3 3.6 7 3.6s5.2-1 7-3.6c-2.4 1.6-4.4 2-7 2s-4.6-.4-7-2z" fill="url(#lg)"/>
-        <defs><linearGradient id="lg" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#f3e2a6"/><stop offset="1" stop-color="#bf8f33"/></linearGradient></defs>
-      </svg>
-    </span>
+    <span class="mark"><img src="logo.png" alt="Soul Destiny" /></span>
     <span><span class="brand-name gold-text">Soul Destiny</span><br/><span class="brand-sub">Numerology</span></span>
   </a>
   <div class="nav-links">
@@ -289,8 +284,7 @@
       <div class="emblem">
         <span class="ring"></span><span class="ring r2"></span><span class="ring r3"></span>
         <div class="nums" id="orbitNums"></div>
-        <svg class="lotus-top" viewBox="0 0 36 36" fill="currentColor"><path d="M18 6c-2 2.4-4 4-4 7a4 4 0 0 0 8 0c0-3-2-4.6-4-7z"/><path d="M9 16c1.6 2.4 4 3.4 6.6 3.4-1.2-1.4-2-3-2-5.2C11.8 14.6 10.2 15.2 9 16zM27 16c-1.2-.8-2.8-1.4-4.6-1.8 0 2.2-.8 3.8-2 5.2C23 19.4 25.4 18.4 27 16z"/></svg>
-        <span class="nine">9</span>
+        <div class="logo-medallion"><img src="logo.png" alt="Soul Destiny Numerology" /></div>
       </div>
     </div>
   </div>
@@ -444,7 +438,7 @@
   const orbit=document.getElementById('orbitNums');
   function placeOrbit(){
     const em=document.querySelector('.emblem');
-    const R=em?em.clientWidth*0.37:130;
+    const R=em?em.clientWidth*0.43:150;
     orbit.innerHTML='';
     for(let i=1;i<=8;i++){const a=(i/8)*Math.PI*2-Math.PI/2;const s=document.createElement('span');s.textContent=i;
       s.style.left='50%';s.style.top='50%';
