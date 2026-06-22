@@ -106,34 +106,36 @@
   .logo-medallion{position:absolute;inset:21%;border-radius:50%;overflow:hidden;border:2px solid var(--gold-3);box-shadow:0 14px 44px rgba(0,0,0,.45),inset 0 0 26px rgba(0,0,0,.35)}
   .logo-medallion img{width:100%;height:100%;object-fit:cover;object-position:center 32%}
 
-  /* ---------- SHOWCASE (thrown cards) ---------- */
-  .showcase-track{height:320vh;background:var(--ivory)}
+  /* ---------- SERVICES (scroll-throw) ---------- */
+  .showcase-track{height:360vh;background:var(--ivory)}
   .showcase-stage{position:sticky;top:0;height:100vh;display:flex;align-items:center;overflow:hidden}
-  .stage-inner{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;display:flex;gap:30px;height:100%;align-items:center}
-  .showcase-copy{width:400px;flex:0 0 400px}
+  .stage-inner{width:100%;max-width:1280px;margin:0 auto;padding:0 24px;display:flex;gap:30px;height:100%;align-items:center}
+  .showcase-copy{width:372px;flex:0 0 372px}
   .showcase-copy .eyebrow{color:var(--gold-deep)}
-  .showcase-copy h2{font-size:clamp(34px,4.2vw,56px);font-weight:800;line-height:1.06;letter-spacing:-.5px;color:var(--ink-dark);margin:6px 0 22px}
-  .showcase-copy p{color:var(--muted-d);font-size:17px;line-height:1.75;max-width:380px}
-  .showcase-copy .actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
-  .cards-layer{position:relative;flex:1;height:78vh}
-  .scard{position:absolute;left:50%;top:50%;width:182px;height:206px;border-radius:18px;padding:22px 18px;
+  .showcase-copy h2{font-size:clamp(34px,4.2vw,54px);font-weight:800;line-height:1.06;letter-spacing:-.5px;color:var(--ink-dark);margin:6px 0 22px}
+  .showcase-copy p{color:var(--muted-d);font-size:17px;line-height:1.75;max-width:360px}
+  .showcase-copy .actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+  .cards-layer{position:relative;flex:1;height:82vh}
+  .scard{position:absolute;left:50%;top:50%;width:178px;height:218px;border-radius:18px;padding:18px 16px;
     background:linear-gradient(165deg,var(--green-700),var(--green-900));color:var(--ink);
-    border:1px solid rgba(226,185,90,.22);box-shadow:0 18px 40px rgba(14,40,30,.28);
+    border:1px solid rgba(226,185,90,.22);box-shadow:0 16px 36px rgba(14,40,30,.26);
     display:flex;flex-direction:column;will-change:transform;transform:translate(-50%,-50%)}
-  .scard .sc-num{font-family:'Cinzel';font-size:12px;color:var(--gold-3);letter-spacing:.1em}
-  .scard .sc-ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin:14px 0 16px;border:1px solid var(--line);color:var(--gold-1)}
-  .scard .sc-ico svg{width:24px;height:24px}
-  .scard h3{font-size:17px;font-weight:600;letter-spacing:.01em;margin-bottom:6px;color:var(--gold-1)}
-  .scard p{font-size:12.5px;color:var(--muted);line-height:1.5}
-  .scard .sc-price{margin-top:auto;padding-top:14px;font-family:'Cinzel';font-size:15px;font-weight:700;color:var(--gold-1);display:flex;align-items:baseline;gap:6px}
-  .scard .sc-price small{font-family:'Jost';font-weight:400;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-  .scard.feature{border-color:rgba(226,185,90,.5);box-shadow:0 18px 44px rgba(14,40,30,.34),inset 0 0 0 1px rgba(226,185,90,.12)}
-  .scard.feature .sc-price{color:var(--gold-2);font-size:17px}
-  .price-note{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:8px 16px;border-radius:999px;border:1px solid var(--gold-3);color:var(--gold-deep);font-size:13px;letter-spacing:.04em}
-  .price-note b{font-family:'Cinzel';color:var(--ink-dark)}
+  .scard .sc-num{font-family:'Cinzel';font-size:11px;color:var(--gold-3);letter-spacing:.08em}
+  .scard .sc-ico{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;margin:10px 0 12px;border:1px solid var(--line);color:var(--gold-1)}
+  .scard .sc-ico svg{width:22px;height:22px}
+  .scard h3{font-size:15.5px;font-weight:600;letter-spacing:.01em;margin-bottom:5px;color:var(--gold-1);line-height:1.15}
+  .scard p{font-size:12px;color:var(--muted);line-height:1.45}
+  .scard .sc-price{margin-top:auto;padding-top:10px;font-family:'Cinzel';font-size:15px;font-weight:700;color:var(--gold-1);display:flex;align-items:baseline;gap:6px}
+  .scard .sc-price small{font-family:'Jost';font-weight:400;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .scard.feature{border-color:rgba(226,185,90,.55);box-shadow:0 18px 44px rgba(14,40,30,.36),inset 0 0 0 1px rgba(226,185,90,.14)}
+  .scard.feature .sc-price{color:var(--gold-2);font-size:16px}
   /* mobile static fallback */
   .cards-layer.static{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:auto;flex:none;width:100%}
-  .cards-layer.static .scard{position:static;width:auto;height:auto;min-height:190px;transform:none!important;left:auto;top:auto}
+  .cards-layer.static .scard{position:static;width:auto;height:auto;min-height:200px;transform:none!important;left:auto;top:auto}
+  .price-note{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:24px;padding:12px 18px;border-radius:16px;border:1px solid var(--line-d);background:#fbf6ea;color:var(--muted-d);font-size:13px;letter-spacing:.03em}
+  .price-note .pn-item{display:inline-flex;align-items:baseline;gap:6px}
+  .price-note b{font-family:'Cinzel';font-size:16px;color:var(--gold-deep)}
+  .price-note .pn-sep{width:1px;align-self:stretch;background:var(--line-d)}
 
   /* ---------- CRYSTALS ---------- */
   .about-card{border-radius:22px;background:#fbf6ea;border:1px solid var(--line-d);overflow:hidden;box-shadow:0 18px 50px rgba(14,40,30,.12)}
@@ -216,8 +218,9 @@
 
   @media(max-width:860px){
     .nav{padding:14px 18px}.nav.scrolled{padding:10px 18px}
-    .nav-links{display:none}.burger{display:flex}
-    .nav-cta{padding:9px 16px;font-size:12px}
+    .nav-links{display:none}.burger{display:flex;margin-left:16px}
+    .nav-cta{margin-left:auto;white-space:nowrap;padding:9px 16px;font-size:12px}
+    .brand-name{font-size:17px;white-space:nowrap}.brand-sub{font-size:8px;letter-spacing:.36em}
     .hero{min-height:auto;padding:120px 0 80px}
     .hero-grid{grid-template-columns:1fr;gap:24px;text-align:center}
     .hero p.lead,.hero .actions{margin-left:auto;margin-right:auto;justify-content:center}
@@ -226,7 +229,7 @@
     .showcase-stage{position:static;height:auto;padding:80px 0}
     .stage-inner{flex-direction:column;height:auto;gap:6px}
     .showcase-copy{width:100%;flex:none;text-align:center}.showcase-copy p,.showcase-copy h2{max-width:none}
-    .showcase-copy .actions{justify-content:center}
+    .showcase-copy .actions,.showcase-copy .price-note{justify-content:center}
     .cards-layer{margin-top:34px}
     #about > .wrap{grid-template-columns:1fr!important;gap:34px!important}
     .event-card{grid-template-columns:1fr;padding:32px 24px;gap:34px}
@@ -326,14 +329,14 @@
         <span class="eyebrow">Our Sacred Services</span>
         <h2>Everything we do to <span class="gold-text">align your destiny</span></h2>
         <p>Personalised numerology solutions crafted to bring success, balance and positivity into every corner of your life — scroll to reveal them all.</p>
-        <div class="price-note">Each service <b>· ₹500 ·</b> Complete Report <b>· ₹3300</b>
+        <div class="price-note"><span class="pn-item"><b>₹500</b> each service</span><span class="pn-sep"></span><span class="pn-item"><b>₹3300</b> complete report</span></div>
         <div class="actions">
           <a href="https://wa.me/919011023082" target="_blank" class="btn btn-gold">Book a Reading</a>
           <a href="#contact" class="btn btn-ghost dk">Talk to Bharti</a>
         </div>
       </div>
       <div class="cards-layer" id="cardsLayer">
-        <div class="scard feature"><span class="sc-num">01 · Full Report</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4Z"/><path d="M14 4v5h5M8 13h8M8 17h5"/></svg></span><h3>Complete Numerology Report</h3><p>The full report — every number, remedy &amp; guidance in one deep reading.</p><span class="sc-price">₹3300 <small>Full report</small></span></div>
+        <div class="scard feature"><span class="sc-num">01 · Full Report</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4Z"/><path d="M14 4v5h5M8 13h8M8 17h5"/></svg></span><h3>Complete Numerology Report</h3><p>Every number, remedy &amp; guidance in one full reading.</p><span class="sc-price">₹3300 <small>Full report</small></span></div>
         <div class="scard"><span class="sc-num">02</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></span><h3>Numerology Reading</h3><p>Decode your life path &amp; destiny numbers.</p><span class="sc-price">₹500 <small>per service</small></span></div>
         <div class="scard"><span class="sc-num">03</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><h3>Signature Analysis</h3><p>A lucky signature that attracts success.</p><span class="sc-price">₹500 <small>per service</small></span></div>
         <div class="scard"><span class="sc-num">04</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3 3 19h18L12 3Z"/><circle cx="12" cy="13" r="2.2"/></svg></span><h3>Personal Yantra</h3><p>A sacred yantra tuned to your vibration.</p><span class="sc-price">₹500 <small>per service</small></span></div>
@@ -523,7 +526,7 @@
     <div class="crystal"><svg class="gem" viewBox="0 0 24 24" fill="${g[1]}" stroke="rgba(0,0,0,.18)" stroke-width="0.5" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9 6 3Z"/><path d="M2 9h20M9 3l3 6 3-6M12 9v13" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="0.7"/></svg>
     <div class="cn">${g[0]}</div><div class="cd">${g[2]}</div></div>`).join('');
 
-  /* ============ THROWN-CARD CHOREOGRAPHY ============ */
+  /* ============ SCROLL-THROW CARD CHOREOGRAPHY ============ */
   const layer=document.getElementById('cardsLayer');
   const cards=[...layer.querySelectorAll('.scard')];
   let slots=[],fan=[],stackC={x:0,y:0};
@@ -533,16 +536,18 @@
   const eo=t=>1-Math.pow(1-t,3);
 
   function layout(){
-    if(!isDesk()){layer.classList.add('static');cards.forEach(c=>c.style.transform='');return;}
+    if(!isDesk()){layer.classList.add('static');cards.forEach(c=>c.style.cssText='');return;}
     layer.classList.remove('static');
     const W=layer.clientWidth,H=layer.clientHeight;
-    const cw=182,ch=206,gx=24,gy=20,cols=3,n=cards.length,rows=Math.ceil(n/cols);
+    const cw=178,ch=218,gx=20,gy=18,n=cards.length;
+    const cols=Math.max(1,Math.min(4,Math.floor((W+gx)/(cw+gx))));
+    const rows=Math.ceil(n/cols);
     const gw=cols*cw+(cols-1)*gx,gh=rows*ch+(rows-1)*gy;
     const sx=(W-gw)/2,sy=(H-gh)/2;
     slots=cards.map((_,i)=>{const c=i%cols,r=(i/cols|0);
       return{x:sx+c*(cw+gx)+cw/2-W/2,y:sy+r*(ch+gy)+ch/2-H/2};});
     const mid=(n-1)/2;
-    fan=cards.map((_,i)=>({x:(i-mid)*44,y:Math.abs(i-mid)*7-12,rot:(i-mid)*5}));
+    fan=cards.map((_,i)=>({x:(i-mid)*40,y:Math.abs(i-mid)*6-10,rot:(i-mid)*4}));
     update();
   }
   function update(){
@@ -550,7 +555,8 @@
     const r=track.getBoundingClientRect();
     const total=track.offsetHeight-window.innerHeight;
     const p=clamp(-r.top/total,0,1);
-    const gather=0.24;            // fan -> single centered stack
+    const gather=0.2,n=cards.length;
+    const stg=0.5/Math.max(1,n-1),win=0.4;   // each card deals out in turn
     cards.forEach((el,i)=>{
       const f=fan[i],s=slots[i];let x,y,rot,sc,z;
       if(p<=gather){
@@ -558,10 +564,9 @@
         x=lerp(f.x,stackC.x,t);y=lerp(f.y,stackC.y,t);rot=lerp(f.rot,0,t);sc=1;z=i;
       }else{
         const t=(p-gather)/(1-gather);
-        const stg=0.06,win=0.42;
         const e=eo(clamp((t-i*stg)/win,0,1));
         x=lerp(stackC.x,s.x,e);y=lerp(stackC.y,s.y,e);rot=0;
-        sc=1+0.07*Math.sin(e*Math.PI);     // little "throw" pop
+        sc=1+0.06*Math.sin(e*Math.PI);     // little "throw" pop
         z=100+i;
       }
       el.style.transform=`translate(-50%,-50%) translate(${x}px,${y}px) rotate(${rot}deg) scale(${sc})`;
