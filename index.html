@@ -125,6 +125,10 @@
   .scard .sc-ico svg{width:24px;height:24px}
   .scard h3{font-size:17px;font-weight:600;letter-spacing:.01em;margin-bottom:6px;color:var(--gold-1)}
   .scard p{font-size:12.5px;color:var(--muted);line-height:1.5}
+  .scard .sc-price{margin-top:auto;padding-top:14px;font-family:'Cinzel';font-size:15px;font-weight:700;color:var(--gold-1);display:flex;align-items:baseline;gap:6px}
+  .scard .sc-price small{font-family:'Jost';font-weight:400;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .scard.feature{border-color:rgba(226,185,90,.5);box-shadow:0 18px 44px rgba(14,40,30,.34),inset 0 0 0 1px rgba(226,185,90,.12)}
+  .scard.feature .sc-price{color:var(--gold-2);font-size:17px}
   .price-note{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:8px 16px;border-radius:999px;border:1px solid var(--gold-3);color:var(--gold-deep);font-size:13px;letter-spacing:.04em}
   .price-note b{font-family:'Cinzel';color:var(--ink-dark)}
   /* mobile static fallback */
@@ -174,6 +178,22 @@
   .event-date .price .per{color:var(--muted);font-size:13px;letter-spacing:.04em}
   .event-date .seats{margin-top:6px;font-size:12px;color:var(--muted);letter-spacing:.06em}
 
+  /* ---------- MEDITATION ---------- */
+  .meditation{background:linear-gradient(165deg,var(--green-900),var(--green-800) 70%,var(--green-900));position:relative;overflow:hidden}
+  .med-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:50px}
+  .med-card{border:1px solid var(--line);border-radius:22px;padding:34px 30px;background:rgba(8,30,40,.4);transition:.35s}
+  .med-card:hover{transform:translateY(-6px);border-color:rgba(226,185,90,.45)}
+  .med-card .mc-ico{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;border:1px solid var(--line);color:var(--gold-1);margin-bottom:18px}
+  .med-card .mc-ico svg{width:28px;height:28px}
+  .med-card h3{font-size:22px;font-weight:700;color:var(--gold-1);margin-bottom:8px}
+  .med-card p{color:var(--muted);font-size:15px;line-height:1.65}
+  .med-plans{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px;margin:30px auto 0}
+  .med-plan{text-align:center;border:1px solid var(--line);border-radius:20px;padding:30px 24px;background:linear-gradient(170deg,rgba(20,40,70,.4),rgba(6,43,31,.45));position:relative;overflow:hidden}
+  .med-plan::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold-2),transparent)}
+  .med-plan .pn{font-family:'Cinzel';font-size:54px;font-weight:800;line-height:1;background:linear-gradient(160deg,var(--gold-1),var(--gold-2) 55%,var(--gold-deep));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .med-plan .pl{font-family:'Cinzel';letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--ink);margin-top:8px}
+  .med-plan .ps{color:var(--muted);font-size:13px;margin-top:6px;letter-spacing:.04em}
+
   /* ---------- CONTACT ---------- */
   .contact{background:linear-gradient(180deg,var(--green-800),var(--green-900));text-align:center}
   .contact h2{font-size:clamp(34px,5vw,62px);font-weight:800;line-height:1.05;letter-spacing:-.5px}
@@ -211,6 +231,7 @@
     #about > .wrap{grid-template-columns:1fr!important;gap:34px!important}
     .event-card{grid-template-columns:1fr;padding:32px 24px;gap:34px}
     .event .moon{width:130px;height:130px;top:8%;right:8%}
+    .med-grid{grid-template-columns:1fr;gap:16px}
     .section{padding:80px 0}
   }
   @media(max-width:560px){
@@ -228,6 +249,8 @@
     .scard .sc-ico{margin:12px 0 12px}
     .head-center{margin-bottom:36px}
     .crystal{width:calc(50% - 9px);min-width:140px}
+    .med-plans{grid-template-columns:1fr;gap:14px}
+    .med-plan{padding:24px 18px}.med-plan .pn{font-size:46px}
     .event-card{padding:26px 20px}
     .event-card h2{font-size:clamp(30px,9vw,40px)}
     .intention{font-size:16px}
@@ -253,7 +276,7 @@
     <span><span class="brand-name gold-text">Soul Destiny</span><br/><span class="brand-sub">Numerology</span></span>
   </a>
   <div class="nav-links">
-    <a href="#about">About</a><a href="#services">Services</a><a href="#crystals">Crystals</a><a href="#event">Event</a><a href="#contact">Contact</a>
+    <a href="#about">About</a><a href="#services">Services</a><a href="#crystals">Crystals</a><a href="#meditation">Meditation</a><a href="#event">Event</a><a href="#contact">Contact</a>
   </div>
   <a href="https://wa.me/919011023082" target="_blank" class="nav-cta">Book a Reading</a>
   <div class="burger" id="burger"><span></span><span></span><span></span></div>
@@ -282,7 +305,7 @@
         <div class="sep"></div>
         <div class="st"><b class="gold-text">10k+</b><span>Lives Aligned</span></div>
         <div class="sep"></div>
-        <div class="st"><b class="gold-text">9</b><span>Sacred Services</span></div>
+        <div class="st"><b class="gold-text">11</b><span>Sacred Services</span></div>
       </div>
     </div>
     <div class="emblem-wrap">
@@ -303,22 +326,24 @@
         <span class="eyebrow">Our Sacred Services</span>
         <h2>Everything we do to <span class="gold-text">align your destiny</span></h2>
         <p>Personalised numerology solutions crafted to bring success, balance and positivity into every corner of your life — scroll to reveal them all.</p>
-        <div class="price-note">Every service <b>· ₹500 ·</b> simple pricing</div>
+        <div class="price-note">Each service <b>· ₹500 ·</b> Complete Report <b>· ₹3300</b>
         <div class="actions">
           <a href="https://wa.me/919011023082" target="_blank" class="btn btn-gold">Book a Reading</a>
           <a href="#contact" class="btn btn-ghost dk">Talk to Bharti</a>
         </div>
       </div>
       <div class="cards-layer" id="cardsLayer">
-        <div class="scard"><span class="sc-num">01</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></span><h3>Numerology Reading</h3><p>Decode your life path &amp; destiny numbers.</p></div>
-        <div class="scard"><span class="sc-num">02</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><h3>Signature Analysis</h3><p>A lucky signature that attracts success.</p></div>
-        <div class="scard"><span class="sc-num">03</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3 3 19h18L12 3Z"/><circle cx="12" cy="13" r="2.2"/></svg></span><h3>Personal Yantra</h3><p>A sacred yantra tuned to your vibration.</p></div>
-        <div class="scard"><span class="sc-num">04</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M9 4a2 2 0 1 1 4 0v1h3a1 1 0 0 1 1 1v3h1a2 2 0 1 1 0 4h-1v3a1 1 0 0 1-1 1h-3v-1a2 2 0 1 0-4 0v1H6a1 1 0 0 1-1-1v-3H4a2 2 0 1 1 0-4h1V6a1 1 0 0 1 1-1h3Z"/></svg></span><h3>Missing Number Remedy</h3><p>Restore the balance your chart is missing.</p></div>
-        <div class="scard"><span class="sc-num">05</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="2.5" y="7.5" width="19" height="13" rx="2"/><path d="M16 20.5V5.5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v15"/></svg></span><h3>Profession Guidance</h3><p>Right career &amp; stream by your birth date.</p></div>
-        <div class="scard"><span class="sc-num">06</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg></span><h3>Name Correction</h3><p>Align your name spelling for prosperity.</p></div>
-        <div class="scard"><span class="sc-num">07</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="10" r="7"/><path d="M9.3 9h.01M14.7 9h.01M9.5 13a3.4 1.8 0 0 0 5 0"/></svg></span><h3>New Baby Name</h3><p>A balanced, auspicious name from day one.</p></div>
-        <div class="scard"><span class="sc-num">08</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9 6 3Z"/><path d="M2 9h20M9 3l3 6 3-6M12 9v13"/></svg></span><h3>Recommended Crystal</h3><p>The healing stone matched to your energy.</p></div>
-        <div class="scard"><span class="sc-num">09</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><h3>Full Moon Meditation</h3><p>Release karmic patterns &amp; manifest.</p></div>
+        <div class="scard feature"><span class="sc-num">01 · Full Report</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4Z"/><path d="M14 4v5h5M8 13h8M8 17h5"/></svg></span><h3>Complete Numerology Report</h3><p>The full report — every number, remedy &amp; guidance in one deep reading.</p><span class="sc-price">₹3300 <small>Full report</small></span></div>
+        <div class="scard"><span class="sc-num">02</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></span><h3>Numerology Reading</h3><p>Decode your life path &amp; destiny numbers.</p><span class="sc-price">₹500 <small>per service</small></span></div>
+        <div class="scard"><span class="sc-num">03</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><h3>Signature Analysis</h3><p>A lucky signature that attracts success.</p><span class="sc-price">₹500 <small>per service</small></span></div>
+        <div class="scard"><span class="sc-num">04</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3 3 19h18L12 3Z"/><circle cx="12" cy="13" r="2.2"/></svg></span><h3>Personal Yantra</h3><p>A sacred yantra tuned to your vibration.</p><span class="sc-price">₹500 <small>per service</small></span></div>
+        <div class="scard"><span class="sc-num">05</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M9 4a2 2 0 1 1 4 0v1h3a1 1 0 0 1 1 1v3h1a2 2 0 1 1 0 4h-1v3a1 1 0 0 1-1 1h-3v-1a2 2 0 1 0-4 0v1H6a1 1 0 0 1-1-1v-3H4a2 2 0 1 1 0-4h1V6a1 1 0 0 1 1-1h3Z"/></svg></span><h3>Missing Number Remedy</h3><p>Restore the balance your chart is missing.</p><span class="sc-price">₹500 <small>per service</small></span></div>
+        <div class="scard"><span class="sc-num">06</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="2.5" y="7.5" width="19" height="13" rx="2"/><path d="M16 20.5V5.5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v15"/></svg></span><h3>Profession Guidance</h3><p>Right career &amp; stream by your birth date.</p><span class="sc-price">₹500 <small>per service</small></span></div>
+        <div class="scard"><span class="sc-num">07</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg></span><h3>Name Correction</h3><p>Align your name spelling for prosperity.</p><span class="sc-price">₹500 <small>per service</small></span></div>
+        <div class="scard"><span class="sc-num">08</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18M8 21v-6h8v6M9 11h.01M15 11h.01"/></svg></span><h3>Business Name</h3><p>An auspicious, prosperous name for your venture.</p><span class="sc-price">₹500 <small>per service</small></span></div>
+        <div class="scard"><span class="sc-num">09</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="10" r="7"/><path d="M9.3 9h.01M14.7 9h.01M9.5 13a3.4 1.8 0 0 0 5 0"/></svg></span><h3>New Baby Name</h3><p>A balanced, auspicious name from day one.</p><span class="sc-price">₹500 <small>per service</small></span></div>
+        <div class="scard"><span class="sc-num">10</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9 6 3Z"/><path d="M2 9h20M9 3l3 6 3-6M12 9v13"/></svg></span><h3>Recommended Crystal</h3><p>The healing stone matched to your energy.</p><span class="sc-price">₹500 <small>per service</small></span></div>
+        <div class="scard"><span class="sc-num">11</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><h3>Full Moon Meditation</h3><p>Release karmic patterns &amp; manifest.</p><span class="sc-price">₹500 <small>per service</small></span></div>
       </div>
     </div>
   </div>
@@ -358,6 +383,43 @@
       <p class="reveal d2">Each crystal carries a unique frequency. Paired with your numerology chart, the right stone becomes a daily companion for healing and manifestation.</p>
     </div>
     <div class="crystal-row reveal d1" id="crystalRow"></div>
+  </div>
+</section>
+
+<!-- MEDITATION -->
+<section class="section meditation" id="meditation">
+  <div class="wrap">
+    <div class="head-center">
+      <span class="eyebrow reveal">Guided Meditation</span>
+      <h2 class="reveal d1">Quiet the mind, <span class="gold-text">align your energy</span></h2>
+      <p class="reveal d2" style="color:var(--muted)">Choose your practice, then how often you'd like to meet each month. Sessions are guided live by Bharti Dhole.</p>
+    </div>
+    <div class="med-grid reveal d1">
+      <div class="med-card">
+        <span class="mc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></span>
+        <h3>Chakra Healing</h3>
+        <p>Clear and balance your seven energy centres to restore calm, focus and emotional flow.</p>
+      </div>
+      <div class="med-card">
+        <span class="mc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17c4 0 4-10 8-10s4 10 8 10"/><path d="M3 21h18"/></svg></span>
+        <h3>Yog Nidra</h3>
+        <p>A deeply restful yogic sleep meditation for stress release, healing and inner stillness.</p>
+      </div>
+    </div>
+    <div class="med-plans reveal d2">
+      <div class="med-plan">
+        <div class="pn">4×</div>
+        <div class="pl">Times a Month</div>
+        <div class="ps">One guided session every week</div>
+        <div style="margin-top:20px"><a href="https://wa.me/919011023082?text=I%20want%20the%204%20sessions%2Fmonth%20meditation%20plan" target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center">Choose Plan</a></div>
+      </div>
+      <div class="med-plan">
+        <div class="pn">8×</div>
+        <div class="pl">Times a Month</div>
+        <div class="ps">Two guided sessions every week</div>
+        <div style="margin-top:20px"><a href="https://wa.me/919011023082?text=I%20want%20the%208%20sessions%2Fmonth%20meditation%20plan" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center">Choose Plan</a></div>
+      </div>
+    </div>
   </div>
 </section>
 
