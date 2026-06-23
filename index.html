@@ -160,13 +160,22 @@
   /* ---------- EVENT ---------- */
   .event{background:linear-gradient(160deg,#0a1230,#0a3a2a 85%);overflow:hidden}
   .event .moon{position:absolute;right:6%;top:14%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 38% 34%,#eef2ff,#aab6e0 58%,#6675ad 100%);opacity:.55}
-  .event-card{position:relative;z-index:4;display:grid;grid-template-columns:1fr .72fr;gap:50px;align-items:center;border:1px solid var(--line);border-radius:26px;padding:54px;background:rgba(8,30,40,.42)}
+  .event-card{position:relative;z-index:4;display:grid;grid-template-columns:1fr .72fr;gap:50px;align-items:start;border:1px solid var(--line);border-radius:26px;padding:54px;background:rgba(8,30,40,.42)}
   .event-card h2{font-size:clamp(34px,4.4vw,56px);font-weight:800;line-height:1.05;margin:10px 0 14px}
   .event-card .lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--muted)}
-  .event-list{list-style:none;margin:26px 0 0;display:grid;gap:12px}
+  .event-label{display:block;font-family:'Cinzel',serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-2);margin-top:26px}
+  .event-list{list-style:none;margin:16px 0 0;display:grid;gap:12px}
   .event-list li{display:flex;align-items:center;gap:12px;color:var(--ink);font-size:16px}
   .event-list li svg{width:18px;height:18px;color:var(--gold-2);flex:0 0 auto}
   .intention{margin-top:26px;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted);font-size:18px;line-height:1.6;border-left:2px solid var(--gold-3);padding-left:18px}
+  .event-extras{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+  .event-extras .box{border:1px solid var(--line);border-radius:16px;padding:18px 20px;background:rgba(8,30,40,.36)}
+  .event-extras .box h4{font-family:'Cinzel';font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);margin-bottom:12px}
+  .event-extras .ready{list-style:none;display:grid;gap:10px}
+  .event-extras .ready li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink)}
+  .event-extras .ready li svg{width:16px;height:16px;color:var(--gold-2);flex:0 0 auto}
+  .event-extras p{font-size:13px;line-height:1.6;color:var(--muted)}
+  .event-tagline{margin-top:24px;text-align:center;font-family:'Cinzel';font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-2)}
   .event-date{position:relative;text-align:center;border:1px solid var(--line);border-radius:22px;padding:34px 30px;background:linear-gradient(170deg,rgba(20,40,70,.5),rgba(6,43,31,.5));overflow:hidden}
   .event-date::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold-2),transparent)}
   .event-date .tag{font-family:'Cinzel';font-size:10px;letter-spacing:.32em;color:var(--gold-2);text-transform:uppercase}
@@ -273,6 +282,7 @@
     .med-plan{padding:24px 18px}.med-plan .pn{font-size:46px}
     .event-card{padding:26px 20px}
     .event-card h2{font-size:clamp(30px,9vw,40px)}
+    .event-extras{grid-template-columns:1fr;gap:14px}
     .intention{font-size:16px}
     .review-card{flex-basis:280px;width:280px;padding:24px 22px}
     .review-card .rq{font-size:17px}
@@ -365,7 +375,7 @@
         <div class="scard"><span class="sc-num">08</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18M8 21v-6h8v6M9 11h.01M15 11h.01"/></svg></span><h3>Business Name</h3><p>An auspicious, prosperous name for your venture.</p><span class="sc-price">₹500 <small>per service</small></span></div>
         <div class="scard"><span class="sc-num">09</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="10" r="7"/><path d="M9.3 9h.01M14.7 9h.01M9.5 13a3.4 1.8 0 0 0 5 0"/></svg></span><h3>New Baby Name</h3><p>A balanced, auspicious name from day one.</p><span class="sc-price">₹500 <small>per service</small></span></div>
         <div class="scard"><span class="sc-num">10</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9 6 3Z"/><path d="M2 9h20M9 3l3 6 3-6M12 9v13"/></svg></span><h3>Recommended Crystal</h3><p>The healing stone matched to your energy.</p><span class="sc-price">₹500 <small>per service</small></span></div>
-        <div class="scard"><span class="sc-num">11</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><h3>Full Moon Meditation</h3><p>Release karmic patterns &amp; manifest.</p><span class="sc-price">₹500 <small>per service</small></span></div>
+        <div class="scard"><span class="sc-num">11</span><span class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><h3>Full Moon Meditation</h3><p>Release karmic patterns &amp; manifest.</p><span class="sc-price">₹99 <small>energy exchange</small></span></div>
       </div>
     </div>
   </div>
@@ -454,23 +464,40 @@
         <span class="eyebrow">Soul Destiny Presents</span>
         <h2>Full Moon <span class="gold-text">Meditation</span></h2>
         <p class="lead">Awaken your soul path under the divine moonlight.</p>
+        <span class="event-label">Experience the power of the full moon</span>
         <ul class="event-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Release old karmic patterns</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Heal emotional blockages</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Activate your soul destiny</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Attract abundance &amp; clarity</li>
         </ul>
-        <div class="intention">“I release what no longer serves me. I align with my highest soul destiny. I am open to divine guidance and abundance.”</div>
+        <div class="event-extras">
+          <div class="box">
+            <h4>Keep Ready</h4>
+            <ul class="ready">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c0 2-2 2.5-2 4.5a2 2 0 0 0 4 0C14 5 12 4.5 12 3Z"/><rect x="9" y="9" width="6" height="11" rx="1.5"/></svg>White candle</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-1.2 16.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 3Z"/><path d="M6.6 9h10.8"/></svg>Glass of water</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="2.4"/><path d="M5 20c1.5-4 4-5.5 7-5.5S17.5 16 19 20M12 11v3"/></svg>Quiet space</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h4>Full Moon Energy</h4>
+            <p>The full moon amplifies what already exists within us — a powerful time to release, heal, manifest, and align with your highest potential.</p>
+          </div>
+        </div>
+        <div class="intention">“I align with my highest soul destiny and welcome divine guidance.”</div>
+        <div class="event-tagline">Connect · Heal · Transform</div>
       </div>
       <div class="event-date">
         <div class="tag">Full Moon Session</div>
-        <div class="d">02</div>
-        <div class="m">APRIL 2026</div>
-        <div class="dow">Thursday</div>
-        <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>10:00 PM</div>
-        <div class="price"><span class="amt">₹500</span><span class="per">/ session</span></div>
-        <div class="seats">Limited seats · book in advance</div>
-        <div style="margin-top:22px"><a href="https://wa.me/919011023082?text=I%20want%20to%20join%20the%20Full%20Moon%20Meditation" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center">Reserve My Spot</a></div>
+        <div class="d" id="fmDay">--</div>
+        <div class="m" id="fmMonth">—</div>
+        <div class="dow" id="fmDow">—</div>
+        <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>10:00 PM (IST)</div>
+        <div class="tag" style="margin-top:18px">Energy Exchange</div>
+        <div class="price" style="margin-top:6px"><span class="amt">₹99</span><span class="per">only</span></div>
+        <div class="seats">Next full moon · limited seats</div>
+        <div style="margin-top:22px"><a href="https://wa.me/919011023082?text=I%20want%20to%20join%20the%20Full%20Moon%20Meditation" target="_blank" class="btn btn-gold" id="fmBook" style="width:100%;justify-content:center">Reserve My Spot</a></div>
       </div>
     </div>
   </div>
@@ -572,6 +599,46 @@
     <div class="rp"><span class="av">${r[0].split(' ').map(w=>w[0]).join('')}</span>
     <div><div class="rn">${r[0]}</div><div class="rl">${r[1]}</div></div></div></div>`;
   document.getElementById('reviewTrack').innerHTML=(reviews.map(card).join('')).repeat(2);
+
+  /* ---- next full moon (auto-updating, Meeus ch.49) ---- */
+  (function(){
+    const rad=Math.PI/180;
+    // instant of the full moon for lunation index k (k = integer + 0.5), returns Unix ms
+    function fullMoonMs(k){
+      const T=k/1236.85,T2=T*T,T3=T2*T,T4=T3*T;
+      let JDE=2451550.09766+29.530588861*k+0.00015437*T2-0.000000150*T3+0.00000000073*T4;
+      const E=1-0.002516*T-0.0000074*T2;
+      const M=(2.5534+29.10535670*k-0.0000014*T2-0.00000011*T3)*rad;
+      const Mp=(201.5643+385.81693528*k+0.0107582*T2+0.00001238*T3-0.000000058*T4)*rad;
+      const F=(160.7108+390.67050284*k-0.0016118*T2-0.00000227*T3+0.000000011*T4)*rad;
+      const Om=(124.7746-1.56375588*k+0.0020672*T2+0.00000215*T3)*rad;
+      JDE+=-0.40614*Math.sin(Mp)+0.17302*E*Math.sin(M)+0.01614*Math.sin(2*Mp)
+        +0.01043*Math.sin(2*F)+0.00734*E*Math.sin(Mp-M)-0.00515*E*Math.sin(Mp+M)
+        +0.00209*E*E*Math.sin(2*M)-0.00111*Math.sin(Mp-2*F)-0.00057*Math.sin(Mp+2*F)
+        +0.00056*E*Math.sin(2*Mp+M)-0.00042*Math.sin(3*Mp)+0.00042*E*Math.sin(M+2*F)
+        +0.00038*E*Math.sin(M-2*F)-0.00024*E*Math.sin(2*Mp-M)-0.00017*Math.sin(Om)
+        -0.00007*Math.sin(Mp+2*M)+0.00004*Math.sin(2*Mp-2*F)+0.00004*Math.sin(3*M)
+        +0.00003*Math.sin(Mp+M-2*F)+0.00003*Math.sin(2*Mp+2*F)-0.00003*Math.sin(Mp+M+2*F)
+        +0.00003*Math.sin(Mp-M+2*F)-0.00002*Math.sin(Mp-M-2*F)-0.00002*Math.sin(3*Mp+M)
+        +0.00002*Math.sin(4*Mp);
+      return (JDE-2440587.5)*86400000;
+    }
+    const now=Date.now();
+    const Y=new Date(now).getUTCFullYear();
+    const yf=Y+(now-Date.UTC(Y,0,1))/(Date.UTC(Y+1,0,1)-Date.UTC(Y,0,1));
+    let k=Math.round((yf-2000)*12.3685)-2+0.5;   // start a couple lunations early, then step forward
+    let ms=fullMoonMs(k);
+    while(ms<now){k+=1;ms=fullMoonMs(k);}
+    const fm=new Date(ms);                        // use the UTC calendar date of the full-moon instant
+    const M=['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    document.getElementById('fmDay').textContent=String(fm.getUTCDate()).padStart(2,'0');
+    document.getElementById('fmMonth').textContent=(M[fm.getUTCMonth()]+' '+fm.getUTCFullYear()).toUpperCase();
+    document.getElementById('fmDow').textContent=D[fm.getUTCDay()];
+    const pretty=`${D[fm.getUTCDay()]}, ${fm.getUTCDate()} ${M[fm.getUTCMonth()]} ${fm.getUTCFullYear()}`;
+    const b=document.getElementById('fmBook');
+    if(b)b.href='https://wa.me/919011023082?text='+encodeURIComponent('I want to join the Full Moon Meditation on '+pretty);
+  })();
 
   /* ============ SCROLL-THROW CARD CHOREOGRAPHY ============ */
   const layer=document.getElementById('cardsLayer');
