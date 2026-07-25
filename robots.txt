@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block nothing sensitive — this is a single-page marketing site.
+Disallow:
+
+Sitemap: https://www.numerobharti.in/sitemap.xml
